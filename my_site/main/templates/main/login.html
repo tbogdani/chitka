@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Login
+{% endblock %}
+{% block content %}
+{% load static %}
+<div class="container">   
+<main class="form-signin">
+    <form>
+      <div class="form-floating_">
+        <h3>Вход</h3>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">E-mail</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Пароль</label>
+      </div>
+  
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Запомнить
+        </label>
+      </div>
+      <div class="form-floating_">
+        <a class="btn btn-primary" href="">
+            Войти
+        </a>
+      </div>
+      
+    </form>
+  </main>
+</div>
+{% endblock %}

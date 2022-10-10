@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+
+
+    <header id="header" class="p-2 bg-dark text-white fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container d-flex">
+          <a href="{% url 'home' %}" class="navbar-brand">
+            <img src="{% static 'img/logo_.png' %}" alt="" height="35px">
+                  
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+            aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+              <li style="margin-left: 120px"><p></p></li>
+              <li class="nav-item">
+                <a href="{% url 'home' %}" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'content' %}" class="nav-link">Content</a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'about' %}" class="nav-link">About</a>
+              </li>
+            
+              <li class="nav-item">
+                {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'profile' %}">Профиль</a>
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Выход</a>
+                {% else %}
+                <a href="{% url 'login' %}">Вход</a>
+                <a href="{% url 'register' %}">Регистрация</a>
+                {% endif %}
+              </li>
+          
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+      </header>
+
+
+  <div class="container body-chitka">
+    {% block content %} {% endblock %}
+  </div>
+
+
+
+
+<div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item2"><a href="{% url 'home' %}" class="nav-link px-2 text-muted">Главная</a></li>
+        <li class="nav-item2"><a href="{% url 'content' %}" class="nav-link px-2 text-muted">Контент</a></li>
+        <li class="nav-item2"><a href="{% url 'about' %}" class="nav-link px-2 text-muted">О проекте</a></li>
+      </ul>
+      <p class="text-center text-muted">ЧИТКА 2022</p>
+    </footer>
+  </div>
+
+  <!-- Пакет JavaScript с Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+

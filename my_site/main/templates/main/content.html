@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% block title %}
+CONTENT
+{% endblock %}
+{% block content %}
+{% load static %}
+<div class="album py-5">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <div>
+          <div>
+            <div class="col">
+                <img src="{% static 'img/content/1.jpg' %}" alt="" width="100%">
+            </div>
+            <p></p>
+            <div class="col">
+                <img src="{% static 'img/content/2.jpg' %}" alt="" width="100%">
+            </div>            <p></p>
+            <div class="col">
+                <img src="{% static 'img/content/3.jpg' %}" alt="" width="100%">
+            </div>            <p></p>
+            <div class="col">
+                <img src="{% static 'img/content/4.jpg' %}" alt="" width="100%">
+            </div>            <p></p>
+            <div class="col">
+                <img src="{% static 'img/content/5.jpg' %}" alt="" width="100%">
+            </div>            <p></p>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+{% endblock %}

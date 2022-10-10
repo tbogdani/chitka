@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+{% block title %} Читка {% endblock %}
+{% block content %}
+
+{% load static %}
+    <div class="reading_list">
+        <div class="container_chitka">
+            
+            <div class="img_chitka">
+                <img class="img_chitka" src="{% static 'img/chitkalution.jpg' %}" alt="">
+            </div>
+            <div class="chitka_description">
+                <p>Дата: 29.09.2022</p>
+                <p>Время: 20:00</p>
+                <p>Адрес: Кадетская линия В.О., 5к2Д</p>
+                <p>Лофт — Вавилов</p>
+                <p>Бар — самый маленький</p>
+            </div>
+        </div>
+        <div class="reading_resident">
+            <div class="reading_role">
+                <p>Здесь будет инфа о пьесе</p>
+                
+            </div>
+            <div class="reading_resident_">
+                <h3>Читают:</h3>
+                 {% for item in readers %}
+                <p>{{ item.name }}</p>
+                  {% endfor %}
+
+                 <div class="btn_reading_list">
+                    <a href="{% url 'create' %}">Добавить читающего</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

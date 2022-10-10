@@ -1,0 +1,10 @@
+{% extends "main/base.html" %}
+{% block title %}
+Log out
+{% endblock %}
+{% block content %}
+<div class="album py-5">
+    <meta http-equiv="refresh" content="0.5;URL={% url 'home' %}"/>
+    <h2>Вы вышли из своей учетной записи</h2>
+</div>
+{% endblock content %}

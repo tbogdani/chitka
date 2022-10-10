@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+{% block title %} CHITKA {% endblock %}
+{% block content %}
+
+{% load static %}
+<div class="container col-xxl-6 px-4 py-1">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-12 col-sm-10 col-lg-6">
+        <img src="{% static 'img/chitka0909.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="400" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="display-6 fw-bold lh-2 mb-3">Читка 09.09.2022</h2>
+        <p>Дата: 09.09.2022</p>
+        <p>Время: 20:00</p>
+        <p>Адрес: Кадетская линия В.О., 5к2Д</p>
+        <p>Лофт — Вавилов</p>
+        <p>Бар — самый маленький</p>
+        <p><br></p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <!--<a href="{% url 'create' %}">
+            <button type="button" class="btn btn-secondary btn-lg px-2 me-md-4">
+                Добавить читающего
+            </button>
+            </a>-->
+        </div>
+      </div>
+    </div>
+    <div class="row flex-lg-row-reverse align-items-center g-2 py-1">
+        <div class="col-12 col-sm-10 col-lg-6">
+            <p> Описание пьесы </p>
+        </div>
+        <div class="col-lg-6">
+            <!--
+            <h3>Читают:</h3>
+            <p></p>
+            {% if readers %}
+            {% for item in readers %}
+            <p>{{ item.name }}</p>
+            {% endfor %}
+            {% else %}
+            <p>Пока никто не записался</p>
+            {% endif %}
+            -->
+        </div>
+      </div>
+  </div>
+
+{% endblock %}
